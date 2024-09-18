@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>filterfill</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="22" height="22" rx="1"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="filterfill">
+            <g id="Clipped">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle"></g>
+                <path d="M1,0 L21,0 C21.5522847,-1.01453063e-16 22,0.44771525 22,1 L22,21 C22,21.5522847 21.5522847,22 21,22 L1,22 C0.44771525,22 3.38176876e-17,21.5522847 0,21 L0,1 C-6.76353751e-17,0.44771525 0.44771525,6.76353751e-17 1,0 Z" id="Rectangle" stroke="#7D7F90" stroke-width="3" stroke-dasharray="2" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            </g>
+            <path d="M9.1807,13 L13,13 L13,7.48679 L11.8541,7.48679 C11.31,7.48679 10.8673,7.04411 10.8673,6.5 C10.8673,5.95589 11.31,5.51321 11.8541,5.51321 L13,5.51321 L13,0 L0,0 L0,13 L3.81933,13 C4.10056,14.2201 5.19577,15.1327 6.50006,15.1327 C7.80429,15.1327 8.89944,14.2201 9.1807,13 Z M5.51321,12.382 L5.51321,11.2361 L1.76391,11.2361 L1.76391,1.76391 L11.2361,1.76391 L11.2361,3.81933 C10.016,4.10056 9.1034,5.19577 9.1034,6.5 C9.1034,7.80429 10.016,8.8995 11.2361,9.1807 L11.2361,11.2361 L7.48679,11.2361 L7.48679,12.382 C7.48679,12.9261 7.04411,13.3688 6.5,13.3688 C5.95589,13.3688 5.51321,12.9261 5.51321,12.382 Z" id="Shape" fill="#2EA6E2" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#2EA6E2" fill-rule="nonzero" points="1 1 12 1 10.5 6.5 11.5 9.5 12 13 9.5 12 6.5 13.5 3.5 12 1 13"></polygon>
+        </g>
+    </g>
+</svg>
