@@ -1,4 +1,5 @@
 
+#if os(iOS)
 import Lottie
 import SwiftUI
 
@@ -20,3 +21,10 @@ struct LottieView: UIViewRepresentable {
         case primaryLoader, longPress, aiGeneration, noPuzzleList
     }
 }
+#else
+struct LottieView {
+    enum LottieType:String {
+        case primaryLoader, longPress, aiGeneration, noPuzzleList
+    }
+}
+#endif

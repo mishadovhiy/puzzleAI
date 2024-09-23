@@ -40,9 +40,11 @@ struct HomeTabBarView: View {
                     }
                     popupsStack
                 }.background(.generalBackground)
+                    .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
                     .environment(\.colorScheme, .dark)
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .frame(maxHeight: .infinity)
             .background(.generalBackground)
             .padding(.top, 8)

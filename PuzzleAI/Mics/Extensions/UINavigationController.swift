@@ -1,7 +1,7 @@
 
 import UIKit
 import SwiftUI
-
+#if os(iOS)
 extension UINavigationController: UIGestureRecognizerDelegate {
     
     static var canSetSwipeGesture = true
@@ -19,3 +19,4 @@ extension UINavigationController: UIGestureRecognizerDelegate {
         UINavigationController.canSetSwipeGesture ? true : false
     }
 }
+#endif

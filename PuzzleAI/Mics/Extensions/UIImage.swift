@@ -8,8 +8,9 @@ extension UIImage {
         }
         self.init(named: name)
     }
-    
+
     func changeSize(newWidth:CGFloat, from:CGSize? = nil, origin:CGPoint = .zero) -> UIImage {
+#if os(iOS)
         let widthPercent = newWidth / (from?.width ?? self.size.width)
         let proportionalSize: CGSize = .init(width: newWidth, height: widthPercent * (from?.height ?? self.size.height))
         let renderer = UIGraphicsImageRenderer(size: proportionalSize)
@@ -17,8 +18,11 @@ extension UIImage {
             self.draw(in: CGRect(origin: origin, size: proportionalSize))
         }
         return newImage
+#else
+        return self
+#endif
+
     }
-    
     func changeSize2() -> UIImage? {
         let targetSize = CGSize(width: 20, height: 20)
         UIGraphicsBeginImageContextWithOptions(targetSize, false, 0.0)

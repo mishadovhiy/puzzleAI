@@ -4,6 +4,7 @@ import SwiftUI
 func animate(_ animationType:Animation = .bouncy, duration:Int? = nil,
              _ animate:@escaping()->(),
              completion:@escaping()->() = {}) {
+#if os(iOS)
     if #available(iOS 17.0, *) {
         withAnimation(animationType) {
             animate()
@@ -18,6 +19,14 @@ func animate(_ animationType:Animation = .bouncy, duration:Int? = nil,
             completion()
         })
     }
+#else
+    withAnimation {
+        animate()
+    }
+    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(duration ?? 200), execute: {
+        completion()
+    })
+#endif
 }
 
 enum Keys:String {

@@ -133,12 +133,6 @@ struct CollectPuzzleViewModel {
                     action?()
                 }
             }
-//            for i in 0..<croppedImages.count {
-//                if croppedImages[i].id == currentHint?.id {
-//                    croppedImages[i].draggedID = croppedImages[i].id
-//                }
-//            }
-//            endDragging(forcePlay: true)
         }
     }
     var updateDBTrigger:(()->())?

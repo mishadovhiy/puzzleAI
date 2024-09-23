@@ -1,6 +1,6 @@
 
 import UIKit
-
+#if os(iOS)
 extension UIView {
     func convertedToImage(bounds:CGRect? = nil) -> UIImage? {
         let renderer = UIGraphicsImageRenderer(bounds: bounds ?? self.bounds)
@@ -9,3 +9,4 @@ extension UIView {
         }
     }
 }
+#endif

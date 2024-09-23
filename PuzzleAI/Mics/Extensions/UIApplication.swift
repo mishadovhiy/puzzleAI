@@ -1,4 +1,4 @@
-
+#if os(iOS)
 import UIKit
 
 extension UIApplication {
@@ -10,3 +10,4 @@ extension UIApplication {
         return scene?.windows.last(where: {$0.isKeyWindow }) ?? ((self.connectedScenes.first as? UIWindowScene)?.windows.first)
     }
 }
+#endif

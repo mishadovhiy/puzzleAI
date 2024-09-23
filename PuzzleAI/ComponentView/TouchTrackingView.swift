@@ -1,6 +1,6 @@
 
 import SwiftUI
-
+#if os(iOS)
 class TouchTrackingUIView: UIView {
     var onTouch: ((_ began:Bool) -> Void)?
     var onTouchMoved: (() -> Void)?
@@ -41,3 +41,4 @@ struct TouchTrackingView: UIViewRepresentable {
     func updateUIView(_ uiView: TouchTrackingUIView, context: Context) { }
 }
 
+#endif

@@ -45,7 +45,9 @@ struct TextEditorView: View {
             }
         }
         .onAppear(perform: {
+#if os(iOS)
             UITextView.appearance().backgroundColor = .clear
+#endif
         })
     }
     
@@ -61,10 +63,16 @@ struct TextEditorView: View {
     }
     
     private var performTextEditor: some View {
+#if os(iOS)
         TextEditor(text: $text)
             .padding(.leading, 5)
             .background(.clear)
             .foregroundColor(.title)
             .font(Text.TextStyleType.default.font.font)
+#else
+        VStack {
+            Text(text)
+        }
+#endif
     }
 }
