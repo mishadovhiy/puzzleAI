@@ -79,7 +79,7 @@ extension ModalPopupView.CointsPopupView {
         }
         
         var cointList:[CointListItem] {
-            type.cointList ?? []//(storeKitModel?.fetchedProducts ?? [])
+            type.cointList ?? (storeKitModel?.fetchedProducts ?? [])
         }
         
         var isNoData:Bool {

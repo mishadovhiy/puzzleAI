@@ -41,7 +41,8 @@ struct StoreKitManagerModel {
             fetchedProducts(product.compactMap({
                 let price = storeKitHolder.priceString(product: $0) ?? "-"
                 let valueFloat = Float($0.productIdentifier.stringArray(from: .decimalDigits).first ?? "") ?? 0
-                let value = CointView.priceStartAmount + ((valueFloat - 1) * Float(CointView.priceMultiplyAmount))
+                let value = Float($0.localizedTitle.numbers)
+                //CointView.priceStartAmount + ((valueFloat - 1) * Float(CointView.priceMultiplyAmount))
                 return .init(title: price, price: .init(value: value, id: $0.productIdentifier))}).sorted(by: {$0.price.value >= $1.price.value}))
         }.store(in: &cancellablesProducts)
         storeKit.startFetching()

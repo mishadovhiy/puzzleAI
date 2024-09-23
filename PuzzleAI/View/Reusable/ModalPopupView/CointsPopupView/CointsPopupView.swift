@@ -93,7 +93,7 @@ extension ModalPopupView {
                 GridItem(.flexible(minimum: 80, maximum: 90), spacing: 12, alignment: .center)
             }
             return LazyVGrid(columns: collumns, alignment: .center) {
-                ForEach(viewModel.cointList, id: \.title) {
+                ForEach(viewModel.cointList, id: \.price.value) {
                     cointsGridItem($0)
                 }
             }
@@ -151,8 +151,7 @@ extension ModalPopupView {
             } else {
                 switch viewModel.type {
                 case .buyCoint:
-                    break
-                   // viewModel.buyProduct()
+                    viewModel.buyProduct()
                 default:
                     viewModel.updateCointBalance(completed: {
                         isPresenting = false

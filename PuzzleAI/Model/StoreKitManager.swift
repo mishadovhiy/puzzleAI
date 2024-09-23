@@ -5,7 +5,7 @@ import Combine
 
 final class StoreKitManager:NSObject, ObservableObject {
     private var productIdentifiers: [String] {
-        Array(1..<6).compactMap({"Coin\($0)"})
+        Array(1...6).compactMap({"Coin\($0)"})
     }
     
     @Published var products: [SKProduct] = [] {
@@ -99,8 +99,6 @@ final class StoreKitManager:NSObject, ObservableObject {
         }
     }
     
-
-    
     private func completePurchuasing() {
         if isPurchuaseRequestCompletedSCS {
             self.purchuaseSuccess = true
@@ -111,6 +109,7 @@ final class StoreKitManager:NSObject, ObservableObject {
 
 extension StoreKitManager:SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        print(response.products.count, " tgerfsead")
         DispatchQueue.main.async {
             if response.products.isEmpty {
                 self.error = .init(error: NSError(domain: "Products not found", code: -2), type: .fetchProduct)
@@ -120,6 +119,7 @@ extension StoreKitManager:SKProductsRequestDelegate {
     }
     
     func request(_ request: SKRequest, didFailWithError error: any Error) {
+        fatalError()
         DispatchQueue.main.async {
             self.error = .init(error: error, type: .fetchProduct)
         }
