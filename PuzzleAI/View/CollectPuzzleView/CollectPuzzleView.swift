@@ -138,11 +138,6 @@ struct CollectPuzzleView: View {
                 }
                 .overlay {
                     if viewModel.neverDragged {
-//                        ZStack {
-//                            Color.red
-//                            Text("to start draging, press puzzle and move finger to the top")
-//                                .setStyle()
-//                        }
                         TutorialView(title: "to start draging, press puzzle and move finger to the top", position: .zero, okPressed: {
                             viewModel.neverDragged = true
                             DispatchQueue.init(label: "db", qos: .userInitiated).async {

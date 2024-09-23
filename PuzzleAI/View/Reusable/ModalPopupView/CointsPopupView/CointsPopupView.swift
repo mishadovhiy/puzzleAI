@@ -73,18 +73,17 @@ extension ModalPopupView {
                 }
             })
             .onAppear {
-                viewModel.viewAppeared()
-//                viewModel.viewAppeared(.init(fetchedProducts: {
-//                    self.viewModel.storeKitModel?.fetchedProducts = $0
-//                }, statePurchuaseSuccess: {
-//                    self.isPresenting = $0
-//                }, error: {
-//                    self.viewModel.storeKitModel?.storeKitError = $0
-//                }, loading: {
-//                    self.viewModel.storeKitModel?.storeKitLoading = $0
-//                }, viewModelGet: {
-//                    self.viewModel
-//                }))
+                viewModel.viewAppeared(.init(fetchedProducts: {
+                    self.viewModel.storeKitModel?.fetchedProducts = $0
+                }, statePurchuaseSuccess: {
+                    self.isPresenting = $0
+                }, error: {
+                    self.viewModel.storeKitModel?.storeKitError = $0
+                }, loading: {
+                    self.viewModel.storeKitModel?.storeKitLoading = $0
+                }, viewModelGet: {
+                    self.viewModel
+                }))
             }
         }
         

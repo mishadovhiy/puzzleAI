@@ -171,7 +171,7 @@ struct HomeTabBarView: View {
     }
     
     private var cointsPopup:some View {
-        ModalPopupView.configureCoint(.cointsPreview, isPresenting: addCointsPresenting)
+        ModalPopupView.configureCoint(.buyCoint, isPresenting: addCointsPresenting)
     }
     
     private var rewardsPopup:some View {

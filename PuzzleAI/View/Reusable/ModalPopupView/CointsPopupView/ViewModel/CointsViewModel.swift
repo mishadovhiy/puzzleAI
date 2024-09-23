@@ -12,7 +12,7 @@ extension ModalPopupView.CointsPopupView {
         }
         /// multiplyes price value of each selected item
         var stopAnimating:Bool = false
-     //   var storeKitModel:StoreKitManagerModel?
+        var storeKitModel:StoreKitManagerModel?
         var loadingButtonID:UUID = .init()
         var puzzleName:String = ""
         var bonusDayNumber:Int? {
@@ -29,9 +29,9 @@ extension ModalPopupView.CointsPopupView {
             stopAnimating = true
         }
         
-        mutating func viewAppeared(){//(_ storeKitModel:StoreKitManagerModel) {
+        mutating func viewAppeared(_ storeKitModel:StoreKitManagerModel) {
             stopAnimating = true
-          //  self.storeKitModel = storeKitModel
+            self.storeKitModel = storeKitModel
             setType()
         }
         
@@ -69,12 +69,12 @@ extension ModalPopupView.CointsPopupView {
         }
         
         var error:MessageContent? {
-//            if let error = storeKitModel?.errorTitle, storeKitModel?.isFailedPurchase == false  {
-//                return .init(title: error)
-//            }
-//            if storeKitModel?.isFailedPurchase == true {
-//                return .init(title: "Error purchuasing")
-//            }
+            if let error = storeKitModel?.errorTitle, storeKitModel?.isFailedPurchase == false  {
+                return .init(title: error)
+            }
+            if storeKitModel?.isFailedPurchase == true {
+                return .init(title: "Error purchuasing")
+            }
             return nil
         }
         
@@ -141,15 +141,15 @@ extension ModalPopupView.CointsPopupView {
         }
 
         var isLoading:Bool {
-           // type == .buyCoint ? !(storeKitModel?.productFetchCompleted ?? false) : stopAnimating
-            stopAnimating
+            type == .buyCoint ? !(storeKitModel?.productFetchCompleted ?? false) : stopAnimating
+           // stopAnimating
         }
         
-//        func buyProduct() {
-//            if let key = selectedItems.first?.id, key != "" {
-//                storeKitModel?.buyProduct(key)
-//            }
-//        }
+        func buyProduct() {
+            if let key = selectedItems.first?.id, key != "" {
+                storeKitModel?.buyProduct(key)
+            }
+        }
         
         func updateHintDB() {
             let selectedValuesTotal = Double(selectedValuesTotal)
