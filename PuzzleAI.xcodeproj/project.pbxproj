@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		823942B02CA2018A0083CB37 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823942AF2CA2018A0083CB37 /* StoreKit.framework */; };
+		8239438C2CA203440083CB37 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8239438B2CA203440083CB37 /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8210E3DA2C9B7AA300F3D6F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +32,25 @@
 		8210E3C92C9B7AA100F3D6F7 /* PuzzleAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzzleAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8210E3D92C9B7AA300F3D6F7 /* PuzzleAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzleAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8210E3E32C9B7AA300F3D6F7 /* PuzzleAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzleAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		823942AF2CA2018A0083CB37 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		823942B22CA201A60083CB37 /* Exceptions for "PuzzleAI" folder in "PuzzleAI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8210E3C82C9B7AA100F3D6F7 /* PuzzleAI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8210E3CB2C9B7AA100F3D6F7 /* PuzzleAI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				823942B22CA201A60083CB37 /* Exceptions for "PuzzleAI" folder in "PuzzleAI" target */,
+			);
 			path = PuzzleAI;
 			sourceTree = "<group>";
 		};
@@ -52,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823942B02CA2018A0083CB37 /* StoreKit.framework in Frameworks */,
+				8239438C2CA203440083CB37 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +99,7 @@
 				8210E3CB2C9B7AA100F3D6F7 /* PuzzleAI */,
 				8210E3DC2C9B7AA300F3D6F7 /* PuzzleAITests */,
 				8210E3E62C9B7AA300F3D6F7 /* PuzzleAIUITests */,
+				823942AE2CA2018A0083CB37 /* Frameworks */,
 				8210E3CA2C9B7AA100F3D6F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +112,14 @@
 				8210E3E32C9B7AA300F3D6F7 /* PuzzleAIUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		823942AE2CA2018A0083CB37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				823942AF2CA2018A0083CB37 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +142,7 @@
 			);
 			name = PuzzleAI;
 			packageProductDependencies = (
+				8239438B2CA203440083CB37 /* Lottie */,
 			);
 			productName = PuzzleAI;
 			productReference = 8210E3C92C9B7AA100F3D6F7 /* PuzzleAI.app */;
@@ -195,6 +226,9 @@
 			);
 			mainGroup = 8210E3C02C9B7AA100F3D6F7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				823942B32CA203010083CB37 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8210E3CA2C9B7AA100F3D6F7 /* Products */;
 			projectDirPath = "";
@@ -393,12 +427,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PuzzleAI/PuzzleAI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PuzzleAI/Preview Content\"";
 				DEVELOPMENT_TEAM = FQA2XH9ZUM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PuzzleAI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -409,7 +445,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dovhiy.PuzzleAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dovhiy.Developer.PuzzlesAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -422,12 +458,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PuzzleAI/PuzzleAI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PuzzleAI/Preview Content\"";
 				DEVELOPMENT_TEAM = FQA2XH9ZUM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PuzzleAI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dovhiy.PuzzleAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dovhiy.Developer.PuzzlesAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -558,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		823942B32CA203010083CB37 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8239438B2CA203440083CB37 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 823942B32CA203010083CB37 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8210E3C12C9B7AA100F3D6F7 /* Project object */;
 }

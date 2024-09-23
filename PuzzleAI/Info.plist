@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>To stay updated about Special Offers, we need a notifications access</string>
+    <key>UIAppFonts</key>
+    <array>
+        <string>RedHatDisplay-Black.otf</string>
+        <string>RedHatDisplay-Bold.otf</string>
+        <string>RedHatDisplay-ExtraBold.otf</string>
+        <string>RedHatDisplay-Light.otf</string>
+        <string>RedHatDisplay-Medium.otf</string>
+        <string>RedHatDisplay-Regular.otf</string>
+        <string>RedHatDisplay-SemiBold.otf</string>
+    </array>
+</dict>
+</plist>

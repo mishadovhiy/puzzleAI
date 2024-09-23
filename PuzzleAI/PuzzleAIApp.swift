@@ -11,7 +11,7 @@ import SwiftUI
 struct PuzzleAIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeTabBarView()
         }
     }
 }
