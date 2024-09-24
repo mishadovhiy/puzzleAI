@@ -1,3 +1,10 @@
+//
+//  UIApplication.swift
+//  PuzzlesAI
+//
+//  Created by Mykhailo Dovhyi on 17.09.2024.
+//
+
 #if os(iOS)
 import UIKit
 

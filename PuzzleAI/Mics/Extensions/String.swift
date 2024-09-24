@@ -4,6 +4,11 @@
 //
 //  Created by Mykhailo Dovhyi on 24.09.2024.
 //
+//  String.swift
+//  PuzzlesAI
+//
+//  Created by Mykhailo Dovhyi on 17.09.2024.
+//
 
 import Foundation
 
