@@ -30,14 +30,14 @@ struct PuzzleItem:Codable, Equatable {
     var completedPeaces:[CroppedPuzzleItem] = []
     var bought:Bool = false
     var aIGenerationType:AIGenerationType = .none
-    
+#if os(iOS)
     func loadImage(quality:ImageQuality = .middle, completion:@escaping(_ image:UIImage?)->()) {
         let manager = FileManagerModel()
         manager.load(imageName: imageName, quality: quality) {
             completion($0)
         }
     }
-    
+#endif
     var isFileURL:Bool {
         imageName.contains("-")
     }
