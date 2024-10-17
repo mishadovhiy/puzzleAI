@@ -8,8 +8,6 @@
 import UIKit
 
 struct APIManager {
-#warning("Token: OpenAI")
-    static var openAIToken:String = "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"
     
     func generateImage(_ request:APIManager.Request.OpenAIRequest, completion: @escaping (_ image: UIImage?, _ error: MessageContent?) -> Void) {
         DispatchQueue(label: "api", qos: .userInitiated).async {
@@ -30,7 +28,7 @@ struct APIManager {
     }
     
     private func generateImage(_ requestData:Request, completion: @escaping (Result<(UIImage, URL?), Error>) -> Void) {
-        let urlString = requestData.url
+        let urlString = requestData.url.appending(requestData.body ?? "")
         guard let url = URL(string: urlString) else {
             completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
             return
@@ -38,17 +36,15 @@ struct APIManager {
         
         var request = URLRequest(url: url)
         request.httpMethod = requestData.method
-        request.httpBody = requestData.body
-        requestData.headers.forEach({
-            request.setValue($0.value, forHTTPHeaderField: $0.key)
-        })
+
+        print(request, "erfesda")
         self.performRequest(request) { result in
             switch result {
             case .success(let success):
                 let data = success
                 if let openAI = self.unparce(data: data) {
-                    self.loadImage(url: openAI.firstResponse?.url ?? "") { image in
-                        completion(.success((image ?? .init(), .init(string: openAI.firstResponse?.url ?? ""))))
+                    self.loadImage(url: openAI.imageUrl) { image in
+                        completion(.success((image ?? .init(), .init(string: openAI.imageUrl))))
                     }
                 } else if let image = UIImage(data: data) {
                     completion(.success((image, .init(string: ""))))
@@ -117,13 +113,14 @@ fileprivate extension APIManager {
 
 extension APIManager {
     struct OpenAiGenerateResponse:Codable {
-        var data:[DateResponse]
-        var firstResponse:DateResponse? {
-            return data.first
-        }
-        struct DateResponse:Codable {
-            var url:String
-        }
+//        var data:[DateResponse]
+//        var firstResponse:DateResponse? {
+//            return data.first
+//        }
+//        struct DateResponse:Codable {
+//            var url:String
+//        }
+        var imageUrl:String
     }
 }
 

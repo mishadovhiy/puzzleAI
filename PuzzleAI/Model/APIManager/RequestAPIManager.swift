@@ -13,7 +13,8 @@ extension APIManager {
         
         var url:String {
             return switch self{
-            case .openAiGenerate:"https://api.openai.com/v1/images/generations"
+            case .openAiGenerate:"https://aimealplanner-ccc8d8d645ff.herokuapp.com/api/generateImage"
+                //"https://api.openai.com/v1/images/generations"
             }
         }
         
@@ -21,11 +22,7 @@ extension APIManager {
             return switch self {
             case .openAiGenerate:
                 [
-                    "Content-Type":"application/json",
-                    "Authorization":"Bearer \(openAIToken)",
-                    "Accept": "/*",
-                    "Accept-Encoding":"gzip, deflate, br"
-                    
+                    "Content-Type":"application/json"
                 ]
             }
         }
@@ -33,11 +30,11 @@ extension APIManager {
         var method:String {
             switch self {
             case .openAiGenerate:
-                return "POST"
+                return "GET"
             }
         }
         
-        var body:Data? {
+        var body:String? {
             switch self {
             case .openAiGenerate(let data):
                 let userInput = data.prompt
@@ -46,14 +43,8 @@ extension APIManager {
                     let escapedInput = userInput.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
                     
                     let requestData = """
-              {
-                  "model": "dall-e-3",
-                  "prompt": "\(escapedInput)",
-                  "n": 1,
-                  "size": "1024x1024",
-                  "style":"\(selectedName)"
-              }
-              """.data(using: .utf8)
+              ?prompt=\(escapedInput)&style=\(selectedName)
+              """.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
                     return requestData
                 } else {
                     return nil
