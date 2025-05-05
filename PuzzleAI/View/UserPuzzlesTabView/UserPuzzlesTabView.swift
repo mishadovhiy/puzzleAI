@@ -21,12 +21,12 @@ struct UserPuzzlesTabView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                if !viewModel.isPaidAI {
-                    UserProgressView(generateAIPresenting: $generatePuzzlePressenting)
-                } else {
+//                if !viewModel.isPaidAI {
+//                    UserProgressView(generateAIPresenting: $generatePuzzlePressenting)
+//                } else {
                 PuzzleListView(viewModel: .init(.aiGenerated), generateAIPresenting: $generatePuzzlePressenting, startOverPressed: $startOverPuzzle, collectPuzzlePresenting: $collectPuzzlePresenting, puzzleModalPresenting: $puzzleModalPresenting, showingTutorial: $showingTutorial)
                 }
-            }
+//            }
         }
     }
 }

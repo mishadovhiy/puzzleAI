@@ -39,4 +39,5 @@ enum Keys:String {
     case appID = "6618149838"
     case storeKitCointKey
     case appGroup = "FQA2XH9ZUM.group.com.dovhiy.detectAppClose"
+    case admob = "ca-app-pub-5463058852615321/8108848862"
 }

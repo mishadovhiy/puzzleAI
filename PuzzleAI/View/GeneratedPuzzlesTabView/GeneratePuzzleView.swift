@@ -60,9 +60,12 @@ struct GeneratePuzzleView: View {
                     .scaleEffect(0.3)
             } else {
                 Button {
-                    withAnimation {
-                        generatePressed()
+                    PuzzleAIApp.bannerCompletedPresenting = {
+                        withAnimation {
+                            generatePressed()
+                        }
                     }
+                    PuzzleAIApp.adPresenting.send(true)
                 } label: {
                     HStack(alignment:.center) {
                         Spacer()

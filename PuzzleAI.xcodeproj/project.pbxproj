@@ -93,6 +93,8 @@
 		8212AD802CA30F2B00B895BD /* PuzzleAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212AD7E2CA30F2B00B895BD /* PuzzleAITests.swift */; };
 		8212AD842CA30F2E00B895BD /* PuzzleAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212AD812CA30F2E00B895BD /* PuzzleAIUITests.swift */; };
 		8212AD852CA30F2E00B895BD /* PuzzleAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212AD822CA30F2E00B895BD /* PuzzleAIUITestsLaunchTests.swift */; };
+		822DCBE02DC909F000137E5A /* AdPresenterRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DCBDF2DC909F000137E5A /* AdPresenterRepresentable.swift */; };
+		822DCBE42DC910E700137E5A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 822DCBE32DC910E700137E5A /* GoogleMobileAds */; };
 		823942B02CA2018A0083CB37 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823942AF2CA2018A0083CB37 /* StoreKit.framework */; };
 		8239438C2CA203440083CB37 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8239438B2CA203440083CB37 /* Lottie */; };
 /* End PBXBuildFile section */
@@ -219,6 +221,7 @@
 		8212AD7E2CA30F2B00B895BD /* PuzzleAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleAITests.swift; sourceTree = "<group>"; };
 		8212AD812CA30F2E00B895BD /* PuzzleAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleAIUITests.swift; sourceTree = "<group>"; };
 		8212AD822CA30F2E00B895BD /* PuzzleAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		822DCBDF2DC909F000137E5A /* AdPresenterRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPresenterRepresentable.swift; sourceTree = "<group>"; };
 		823942AF2CA2018A0083CB37 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -227,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822DCBE42DC910E700137E5A /* GoogleMobileAds in Frameworks */,
 				823942B02CA2018A0083CB37 /* StoreKit.framework in Frameworks */,
 				8239438C2CA203440083CB37 /* Lottie in Frameworks */,
 			);
@@ -312,6 +316,7 @@
 				8212ACB22CA30F2300B895BD /* Line.swift */,
 				8212ACB32CA30F2300B895BD /* LoadingButton.swift */,
 				8212ACB42CA30F2300B895BD /* LottieView.swift */,
+				822DCBDF2DC909F000137E5A /* AdPresenterRepresentable.swift */,
 				8212ACB52CA30F2300B895BD /* SelectionScrollView.swift */,
 				8212ACB62CA30F2300B895BD /* SuperNavigationView.swift */,
 				8212ACB72CA30F2300B895BD /* testView.swift */,
@@ -320,13 +325,6 @@
 				8212ACBA2CA30F2300B895BD /* TutorialView.swift */,
 			);
 			path = ComponentView;
-			sourceTree = "<group>";
-		};
-		8212ACBC2CA30F2300B895BD /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animation;
 			sourceTree = "<group>";
 		};
 		8212ACC72CA30F2300B895BD /* Extensions */ = {
@@ -360,20 +358,11 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		8212ACD02CA30F2300B895BD /* sounds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = sounds;
-			sourceTree = "<group>";
-		};
 		8212ACD22CA30F2300B895BD /* Mics */ = {
 			isa = PBXGroup;
 			children = (
-				8212ACBC2CA30F2300B895BD /* Animation */,
 				8212ACC72CA30F2300B895BD /* Extensions */,
 				8212ACCF2CA30F2300B895BD /* fonts */,
-				8212ACD02CA30F2300B895BD /* sounds */,
 				8212ACD12CA30F2300B895BD /* Keys.swift */,
 			);
 			path = Mics;
@@ -742,6 +731,7 @@
 			name = PuzzleAI;
 			packageProductDependencies = (
 				8239438B2CA203440083CB37 /* Lottie */,
+				822DCBE32DC910E700137E5A /* GoogleMobileAds */,
 			);
 			productName = PuzzleAI;
 			productReference = 8210E3C92C9B7AA100F3D6F7 /* PuzzleAI.app */;
@@ -821,6 +811,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				823942B32CA203010083CB37 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				822DCBDA2DC9089C00137E5A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8210E3CA2C9B7AA100F3D6F7 /* Products */;
@@ -887,6 +878,7 @@
 				8212AD362CA30F2300B895BD /* TutorialView.swift in Sources */,
 				8212AD372CA30F2300B895BD /* Button.swift in Sources */,
 				8212AD382CA30F2300B895BD /* Date+DateComponents.swift in Sources */,
+				822DCBE02DC909F000137E5A /* AdPresenterRepresentable.swift in Sources */,
 				8212AD392CA30F2300B895BD /* Encodable+Decodable.swift in Sources */,
 				8212AD3A2CA30F2300B895BD /* Int.swift in Sources */,
 				8212AD3B2CA30F2300B895BD /* String.swift in Sources */,
@@ -1108,7 +1100,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PuzzleAI/PuzzleAI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PuzzleAI/Preview Content\"";
 				DEVELOPMENT_TEAM = FQA2XH9ZUM;
 				ENABLE_PREVIEWS = YES;
@@ -1126,7 +1118,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dovhiy.Developer.PuzzlesAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = NO;
@@ -1146,7 +1138,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PuzzleAI/PuzzleAI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PuzzleAI/Preview Content\"";
 				DEVELOPMENT_TEAM = FQA2XH9ZUM;
 				ENABLE_PREVIEWS = YES;
@@ -1164,7 +1156,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dovhiy.Developer.PuzzlesAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = NO;
@@ -1291,6 +1283,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		822DCBDA2DC9089C00137E5A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.3.0;
+			};
+		};
 		823942B32CA203010083CB37 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm";
@@ -1302,6 +1302,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		822DCBE32DC910E700137E5A /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 822DCBDA2DC9089C00137E5A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		8239438B2CA203440083CB37 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 823942B32CA203010083CB37 /* XCRemoteSwiftPackageReference "lottie-spm" */;
